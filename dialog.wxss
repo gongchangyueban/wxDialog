@@ -1,0 +1,51 @@
+/* component/dialog/dialog.wxss */
+.fixed-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all .8s initial;
+}
+
+.fixed-dialog-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20rpx;
+  background-color: #fff;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fixed-dialog-title{
+  font-weight: bold;
+  padding: 20rpx;
+}
+.fixed-dialog-title,.fiexd-dialog-con{
+  text-align: center;
+}
+.fiexd-dialog-con{
+  padding: 0 20rpx 20rpx;
+}
+.fiexd-dialog-btn-box{
+  border-top: solid 1px #ddd;
+  display: flex;
+  justify-content: flex-start;
+}
+.fiexd-btn{
+  flex:1;
+  background-color: #fff;
+  font-weight: normal;
+  border-radius: 0;
+}
+.fiexd-btn:nth-child(2n){
+  border-left: solid 1px #ddd;
+}
+.fiexd-btn::after{
+  border: none;
+}
+

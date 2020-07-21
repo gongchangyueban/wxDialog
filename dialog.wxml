@@ -1,0 +1,29 @@
+<!--component/dialog/dialog.wxml-->
+
+<!-- 
+  使用说明： 
+    1、title建议不超过8个字
+    2、按钮数量建议不超过3个且文字不超过4个字
+    3、点击按钮后通过事件click可获取点击对象的event对象，从而获取id判断当前点击的按钮，id值为index值
+-->
+
+<view hidden="{{!hidden}}" class="fixed-overlay">
+  <view class="fixed-dialog-box">
+    <view class="fixed-dialog-title">{{title}}</view>
+    <view class="fiexd-dialog-con">{{content}}</view>
+    <view class="fiexd-dialog-btn-box">
+      <button 
+      wx:for="{{btnArr}}"
+      wx:key="index"
+      class="fiexd-btn {{item.btnClass}}" 
+      open-type="{{item.type}}"
+      bindgetphonenumber="userInfo"
+      bindgetuserinfo="userInfo"
+      bindtap="{{item.type?'':'click'}}"
+      data-id="{{index}}"
+      >
+        {{item.content}}
+      </button>
+    </view>
+  </view>
+</view>
